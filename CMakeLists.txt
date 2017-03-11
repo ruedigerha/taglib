@@ -43,6 +43,7 @@ endif()
 option(BUILD_TESTS "Build the test suite" OFF)
 option(BUILD_EXAMPLES "Build the examples" OFF)
 option(BUILD_BINDINGS "Build the bindings" ON)
+option(BUILD_TOOLS "Build the tools" ON)
 
 option(NO_ITUNES_HACKS "Disable workarounds for iTunes bugs" OFF)
 
@@ -144,6 +145,10 @@ endif()
 
 if(BUILD_EXAMPLES)
   add_subdirectory(examples)
+endif()
+
+if(BUILD_TOOLS)
+  add_subdirectory(tools)
 endif()
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.cmake" "${CMAKE_CURRENT_BINARY_DIR}/Doxyfile")
