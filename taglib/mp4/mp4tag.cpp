@@ -955,6 +955,8 @@ namespace
     { "----:com.apple.iTunes:LANGUAGE", "LANGUAGE" },
     { "----:com.apple.iTunes:LICENSE", "LICENSE" },
     { "----:com.apple.iTunes:MEDIA", "MEDIA" },
+    { "----:com.apple.iTunes:MQAENCODER", "MQAENCODER" },
+    { "----:com.apple.iTunes:ORIGINALSAMPLERATE", "ORIGINALSAMPLERATE" },
   };
   const size_t keyTranslationSize = sizeof(keyTranslation) / sizeof(keyTranslation[0]);
 
