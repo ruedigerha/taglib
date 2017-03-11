@@ -1,6 +1,22 @@
-# TagLib
+# TagLib (MQA Edition)
 
-[![Build Status](https://travis-ci.org/taglib/taglib.svg?branch=master)](https://travis-ci.org/taglib/taglib)
+This fork of taglib is only of interest to you if you - like me - want to
+transcode your MQA music to ALAC so that you can drop the files into
+iTunes and sync them to your iPhone.
+
+MQA files use some particular tags (`ENCODER`, `MQAENCODER` and
+`ORIGNALSAMPLERATE`), the latter two are currently not supported by most
+metadata tools. These tags are usually lost when transcoding.
+
+In this fork I've simply added recognition of these tags in MP4 files, and
+a small tool `copymqatags` (built by default) that will copy them (if they
+exist) from the original MQA file (usually FLAC) to the transcoded ALAC
+file.
+
+Note that the `ENCODER` value is placed into `ENCODEDBY`. This seems to be
+the equivalent MP4 tag for this value. The software I use can deal with
+that, others may have problems. Let me know if any program absolutely
+requires `ENCODER` here.
 
 ### TagLib Audio Meta-Data Library
 
